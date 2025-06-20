@@ -446,9 +446,9 @@ The test suite is designed to run in CI/CD environments:
 
 ### **Test Results**
 ```
-13 passed, 0 failed
+11 passed, 0 failed
 ✅ 6 agent tests (orchestration, validation, performance)
-✅ 7 API tests (endpoints, streaming, validation)
+✅ 5 API tests (endpoints, streaming, validation)
 ✅ 100% core functionality coverage
 ✅ All external APIs properly mocked
 ✅ Error handling and edge cases covered
