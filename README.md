@@ -258,7 +258,6 @@ curl -X POST "http://localhost:8000/analyze-stream" \
 ```bash
 curl http://localhost:8000/health
 ```
-```
 
 ## 🔧 Configuration & Authentication
 
@@ -283,7 +282,7 @@ The system integrates with several external APIs to gather stock data, financial
 3. **OpenAI (AI Analysis)**
    - **Purpose**: AI-powered sentiment analysis and text processing
    - **Sign up**: https://platform.openai.com/api-keys
-   - **Pricing**: Pay-per-use (typically $0.002 per 1K tokens)
+   - **Pricing**: Depends on the model
    - **Environment variable**: `OPENAI_API_KEY`
 
 #### Optional API Keys
@@ -404,17 +403,14 @@ python -m pytest app/tests/ -v --tb=long
 - `test_orchestration_data_completeness` - Validates complete data structure
 - `test_orchestration_with_mocks` - Isolated testing with mocked external APIs
 - `test_orchestration_fallback_logic` - Tests API fallback mechanisms
-- `test_orchestration_performance` - Performance benchmarking (< 30 seconds)
+- `test_orchestration_performance` - Performance benchmarking (< 45 seconds)
 
 #### **API Tests (`test_api.py`)**
-- `test_happy_flow` - Main streaming endpoint functionality
+- `test_analyze_stream_endpoint` - Main streaming endpoint functionality
 - `test_health_endpoint` - Health check endpoint validation
 - `test_invalid_symbol` - Schema validation and error responses
 - `test_metrics_endpoint` - Prometheus metrics endpoint
-- `test_analyze_stream_endpoint` - Server-Sent Events (SSE) format validation
 - `test_metrics_collection` - Metrics collection functionality
-- `test_schema_validation` - Request validation and error handling
-
 ### **Test Configuration**
 
 The test suite includes:
@@ -444,7 +440,7 @@ RATE_LIMIT_REQUESTS=1000 # High limit for tests
 
 The test suite is designed to run in CI/CD environments:
 - **No External Dependencies**: All external APIs are mocked
-- **Fast Execution**: Complete test suite runs in ~1 minute
+- **Fast Execution**: Complete test suite runs in < 2 minutes
 - **Deterministic Results**: Tests produce consistent results across environments
 - **Comprehensive Coverage**: Tests cover all critical functionality
 
