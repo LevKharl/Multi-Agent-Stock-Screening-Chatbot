@@ -77,7 +77,7 @@ The system uses a **multi-agent architecture** built with LangChain/LangGraph wh
 - ✅ **User-friendly Design**: Intuitive stock analysis display
 
 #### **5. Advanced Features**
-- ✅ **Fallback Logic**: Price data fallback (Alpha Vantage → Yahoo Finance)
+- ✅ **Fallback Logic**: Price data fallback (Alpha Vantage → Yahoo Finance) and Sentiment data (NewsAPI + RSS feeds)
 - ✅ **Monitoring & Analytics**: Prometheus metrics and performance tracking
 - ✅ **Rate Limiting**: Basic IP-based rate limiting
 - ✅ **Error Handling**: Comprehensive retry mechanisms and graceful degradation
