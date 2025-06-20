@@ -258,7 +258,6 @@ curl -X POST "http://localhost:8000/analyze-stream" \
 ```bash
 curl http://localhost:8000/health
 ```
-```
 
 ## 🔧 Configuration & Authentication
 
