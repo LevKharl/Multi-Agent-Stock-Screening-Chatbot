@@ -282,7 +282,7 @@ The system integrates with several external APIs to gather stock data, financial
 3. **OpenAI (AI Analysis)**
    - **Purpose**: AI-powered sentiment analysis and text processing
    - **Sign up**: https://platform.openai.com/api-keys
-   - **Pricing**: Pay-per-use (typically $0.002 per 1K tokens)
+   - **Pricing**: Depends on the model
    - **Environment variable**: `OPENAI_API_KEY`
 
 #### Optional API Keys
